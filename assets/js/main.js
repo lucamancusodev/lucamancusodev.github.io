@@ -214,7 +214,7 @@ var typed = new Typed(".type", {
   strings: ["un software engineer", "un web developer", "un IT administrator"],
   smartBackspace: true,
   startDelay: 1000,
-  typeSpeed: 60,
+  typeSpeed: 10,
   backDelay: 1000,
   backSpeed: 60,
   loop: true,
