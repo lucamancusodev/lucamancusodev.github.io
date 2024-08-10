@@ -13,7 +13,7 @@ async function handleSubmit(event) {
     },
   })
     .then((response) => {
-      status.innerHTML = "Your message has been sent.";
+      status.innerHTML = "Grazie per il tuo messaggio";
       document.querySelector(".alert_style").style.display = "block";
 
       // hide alert after 3 seconds
@@ -24,7 +24,7 @@ async function handleSubmit(event) {
     })
     .catch((error) => {
       status.innerHTML =
-        "Oops! There was a problem delivering your message, please contact via other means.";
+        "Oops! Il messaggio non è stato recapitato, contattami in altri luogi.";
       document.querySelector(".alert_style").style.display = "block";
 
       // hide alert after 3 seconds
