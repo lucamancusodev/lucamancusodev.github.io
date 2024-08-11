@@ -94,29 +94,48 @@ skillHeaderArr.forEach((element, idx) => {
 // QUALIFICATION TABS
 let education = document.getElementById("education");
 let work = document.getElementById("work");
+let certs = document.getElementById("certs");
+
 let educationheader = document.getElementById("educationheader");
 let workheader = document.getElementById("workheader");
+let certsheader = document.getElementById("certsheader");
+
+// Stato iniziale: mostra 'education', nasconde 'work' e 'certs'
+education.classList.remove("qualification-inactive");
+work.classList.add("qualification-inactive");
+certs.classList.add("qualification-inactive");
+
 workheader.style.color = "var(--text-color)";
 educationheader.style.color = "var(--first-color)";
+certsheader.style.color = "var(--text-color)";
 
 educationheader.addEventListener("click", () => {
-  let condition1 = work.classList.contains("qualification-inactive");
-  if (!condition1) {
     education.classList.remove("qualification-inactive");
+    certs.classList.add("qualification-inactive");
     work.classList.add("qualification-inactive");
     workheader.style.color = "var(--text-color)";
     educationheader.style.color = "var(--first-color)";
-  }
+    certsheader.style.color = "var(--text-color)";
 });
+
 workheader.addEventListener("click", () => {
-  let condition2 = education.classList.contains("qualification-inactive");
-  if (!condition2) {
     work.classList.remove("qualification-inactive");
     education.classList.add("qualification-inactive");
+    certs.classList.add("qualification-inactive");
     educationheader.style.color = "var(--text-color)";
     workheader.style.color = "var(--first-color)";
-  }
+    certsheader.style.color = "var(--text-color)";
 });
+
+certsheader.addEventListener("click", () => {
+    certs.classList.remove("qualification-inactive");
+    work.classList.add("qualification-inactive");
+    education.classList.add("qualification-inactive");
+    educationheader.style.color = "var(--text-color)";
+    workheader.style.color = "var(--text-color)";
+    certsheader.style.color = "var(--first-color)";
+});
+
 
 // PORTFOLIO SWIPER
 let swiper = new Swiper(".mySwiper", {
@@ -211,11 +230,11 @@ themeButton.addEventListener("click", () => {
 
 // Typing Animation using Typed JS
 var typed = new Typed(".type", {
-  strings: ["un software engineer", "un web developer", "un IT administrator"],
+  strings: ["uno sviluppatore fullstack", "un web developer", "un IT administrator", "un appassionato di informatica"],
   smartBackspace: true,
   startDelay: 1000,
-  typeSpeed: 60,
+  typeSpeed: 20,
   backDelay: 1000,
-  backSpeed: 60,
+  backSpeed: 30,
   loop: true,
 });
