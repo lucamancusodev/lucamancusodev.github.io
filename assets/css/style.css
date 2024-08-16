@@ -1039,3 +1039,9 @@ button {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+
+.blurred {
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
+}
