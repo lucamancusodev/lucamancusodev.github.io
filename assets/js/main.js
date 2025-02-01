@@ -254,6 +254,6 @@ window.addEventListener('load', () => {
 
 
   //calculate years of experience
-  let exp = today.getFullYear() - 2018;
+  let exp = today.getFullYear() - 2016;
   document.getElementById("experience_age").innerHTML = exp;
 });
