@@ -238,3 +238,22 @@ var typed = new Typed(".type", {
   backSpeed: 30,
   loop: true,
 });
+
+
+//onload
+window.addEventListener('load', () => {
+  //calculate my age from birth date (1996-10-14)
+  let today = new Date();
+  let birthDate = new Date(1996, 9, 14);
+  let age = today.getFullYear() - birthDate.getFullYear();
+  let m = today.getMonth() - birthDate.getMonth();
+  if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+    age--;
+  }
+  document.getElementById("age").innerHTML = age;
+
+
+  //calculate years of experience
+  let exp = today.getFullYear() - 2018;
+  document.getElementById("experience_age").innerHTML = exp;
+});
